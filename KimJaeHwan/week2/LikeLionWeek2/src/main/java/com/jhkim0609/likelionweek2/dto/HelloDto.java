@@ -11,10 +11,6 @@ import lombok.*;
 public class HelloDto {
     private String name;
     private Integer age;
-    public HelloDto(String name, Integer age) {
-        this.name = name;
-        this.age = age;
-    }
     public static HelloDto fromEntity(HelloEntity entity) {
         return HelloDto.builder().name(entity.getName()).age(entity.getAge()).build();
     }
